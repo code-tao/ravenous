@@ -53,20 +53,18 @@ class SearchBar extends React.Component {
   }
 
   renderSortByOptions () {
-    return Object.keys(this.sortByOptions).map((sortByOption) => {
+    return Object.keys(this.sortByOptions).map(sortByOption => {
       const sortByOptionValue = this.sortByOptions[sortByOption];
-      return <li
+      return (<li
         className={this.getSortByClass(sortByOptionValue)}
         key={sortByOptionValue}
         onClick={
           this.handleSortByChange.bind(this, sortByOptionValue)
           /*Yet to fully understand this use of '.bind(this)'*/
         }
-        >{sortByOption}</li>
+        >{sortByOption}</li>);
     })
   }
-
-
 
   render () {
     return (
