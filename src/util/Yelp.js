@@ -17,10 +17,12 @@ const Yelp = {
             'id': business.id,
             'imageSrc': business.image_url,
             'name': business.name,
+            'url': business.url,
             'address': business.location.address1,
             'city': business.location.city,
             'state': business.location.state,
             'zipCode': business.location.zip_code,
+            'mapUrl': `https://www.google.com/maps/search/?api=1&query=${business.location.address1}+${business.location.city}+${business.location.state}+${business.location.zip_code}`,
             'category': business.categories[0].title,
             'rating': business.rating,
             'reviewCount': business.review_count

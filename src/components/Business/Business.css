@@ -17,6 +17,11 @@
   font-weight: 600;
 }
 
+.Business a {
+  text-decoration: none;
+  color: initial;
+}
+
 .Business-information {
   display: flex;
   justify-content: space-between;

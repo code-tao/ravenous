@@ -19,6 +19,7 @@ class SearchBar extends React.Component {
     this.handleTermChange = this.handleTermChange.bind(this);
     this.handleLocationChange = this.handleLocationChange.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
+    // this.handleSortByChange = this.handleSortByChange.bind(this);
   }
 
   getSortByClass(sortByOption) {
@@ -32,7 +33,11 @@ class SearchBar extends React.Component {
   handleSortByChange(sortByOption) {
     this.setState({
       'sortBy': sortByOption
-    });
+    }, () => {
+      if (this.props.businesses.length != 0) {
+        this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy)
+      }
+    })
   } //May need to be bound '.bind(this)'
 
   handleTermChange(event) {
@@ -52,7 +57,7 @@ class SearchBar extends React.Component {
     event.preventDefault();
   }
 
-  renderSortByOptions () {
+  renderSortByOptions() {
     return Object.keys(this.sortByOptions).map(sortByOption => {
       const sortByOptionValue = this.sortByOptions[sortByOption];
       return (<li
@@ -62,11 +67,11 @@ class SearchBar extends React.Component {
           this.handleSortByChange.bind(this, sortByOptionValue)
           /*Yet to fully understand this use of '.bind(this)'*/
         }
-        >{sortByOption}</li>);
+      >{sortByOption}</li>);
     })
   }
 
-  render () {
+  render() {
     return (
       <div className="SearchBar">
         <div className="SearchBar-sort-options">
