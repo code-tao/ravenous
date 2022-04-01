@@ -1,3 +1,18 @@
+# Ravenous
+
+Utilizing [Yelp Fusion API](https://www.yelp.com/developers/documentation/v3/get_started) business search endpoints, ravenous is a single-page react web app that helps users explore thousands of businesses around the world.
+
+Ravenous allows a user to:
+* Recieve businesses information including address and reviews from search.
+* Sort search result by four different criteria.
+* Visit business address on Google maps.
+* View more information about a business on Yelp.
+
+## Using ravenous
+
+* A copy of this app can be run on your local server using the commands [below](#Getting-Started-with-Create-React-App).
+* CORS Anywhere, found [here](https://cors-anywhere.herokuapp.com/corsdemo), is required to add CORS headers to proxied search requests sent from the app.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
