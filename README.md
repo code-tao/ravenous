@@ -10,8 +10,10 @@ Ravenous allows a user to:
 
 ## Using ravenous
 
-* A copy of this app can be run on your local server using the commands [below](#Getting-Started-with-Create-React-App).
-* CORS Anywhere, found [here](https://cors-anywhere.herokuapp.com/corsdemo), is required to add CORS headers to proxied search requests sent from the app.
+* Visit the [live website](https://raven-app.surge.sh), OR
+* Run a copy of this app on your machine using the guide commands [below](#Getting-Started-with-Create-React-App).
+
+
 
 # Getting Started with Create React App
 
