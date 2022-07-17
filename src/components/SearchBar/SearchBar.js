@@ -34,7 +34,7 @@ class SearchBar extends React.Component {
     this.setState({
       'sortBy': sortByOption
     }, () => {
-      if (this.props.businesses.length != 0) {
+      if (this.props.businesses.length !== 0) {
         this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy)
       }
     })
@@ -66,6 +66,7 @@ class SearchBar extends React.Component {
         onClick={
           this.handleSortByChange.bind(this, sortByOptionValue)
           /*Yet to fully understand this use of '.bind(this)'*/
+          /*Finally got it, ha!*/ 
         }
       >{sortByOption}</li>);
     })
@@ -81,7 +82,7 @@ class SearchBar extends React.Component {
         </div>
         <form>
           <div className="SearchBar-fields">
-            <input onChange={this.handleTermChange} placeholder="Search Businesses" />
+            <input onChange={this.handleTermChange} placeholder="Search for Services e.g 'Pizza', 'Taxi', 'Nanny'" />
             <input onChange={this.handleLocationChange} placeholder="Where?" />
           </div>
           <div className="SearchBar-submit">
